@@ -10,7 +10,7 @@ exports["callback"]:Register("sp-blackmarket:canbuy", function(source, pData)
 			xPlayer.removeAccountMoney('money', pData.price)
 			xPlayer.addInventoryItem(string.upper(pData.weapon), 1)
 			removeStock(pData.weapon, false)
-			exports['sp-lib']:addDiscordLog('https://discord.com/api/webhooks/855603516580298762/-skYVSBKNVbRleh2qArAGStt27g7-jZYJU9hgG11f3yL5R4e0pJttE6RvdZz23d5prQh', 16753920, "BlackMarket - Silah", string.format("%s isimli oyuncu %s silahi aldi($%d).",xPlayer.getName(),pData.weapon,pData.price), "Spontane Roleplay")
+			exports['sp-lib']:addDiscordLog('WEBHOOK HERE', 16753920, "BlackMarket - Silah", string.format("%s isimli oyuncu %s silahi aldi($%d).",xPlayer.getName(),pData.weapon,pData.price), "Spontane Roleplay")
 			TriggerClientEvent('esx:showAdvancedNotification', src, "Satıcı", "", "İstediğini verdim, şimdi toz ol." , "CHAR_MP_MERRYWEATHER", 1)
 			TriggerClientEvent('sp-blackmarket:closeui', src)
 			return true
@@ -34,7 +34,7 @@ exports["callback"]:Register("sp-blackmarket:canbuy:item", function(source, pDat
 			xPlayer.removeAccountMoney('money', pData.price)
 			xPlayer.addInventoryItem(pData.weapon, 1)
 			removeStock(pData.weapon, true)
-			exports['sp-lib']:addDiscordLog('https://discord.com/api/webhooks/855603516580298762/-skYVSBKNVbRleh2qArAGStt27g7-jZYJU9hgG11f3yL5R4e0pJttE6RvdZz23d5prQh', 16753920, "BlackMarket - Item", string.format("%s isimli oyuncu %s aldi($%d).",xPlayer.getName(),pData.weapon,pData.price), "Spontane Roleplay")
+			exports['sp-lib']:addDiscordLog('WEBHOOK HERE', 16753920, "BlackMarket - Item", string.format("%s isimli oyuncu %s aldi($%d).",xPlayer.getName(),pData.weapon,pData.price), "Spontane Roleplay")
 			TriggerClientEvent('esx:showAdvancedNotification', src, "Satıcı", "", "İstediğini verdim, şimdi toz ol." , "CHAR_MP_MERRYWEATHER", 1)
 			TriggerClientEvent('sp-blackmarket:closeui', src)
 			return true
